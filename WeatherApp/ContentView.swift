@@ -6,16 +6,15 @@
 //
 
 import SwiftUI
+import ReusableComponents
 
 struct ContentView: View {
-    let gradient = Gradient(colors: [.blue, .white])
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: gradient,
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing)
+            BackgroundView(topColor: .blue, bottomColor: .lightBlue)
             .ignoresSafeArea(.all)
+            
             VStack {
                 Text("Cupertino, CA")
                     .font(.system(size: 32, weight: .medium, design: .default))
@@ -27,12 +26,36 @@ struct ContentView: View {
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 100)
+                        .frame(width: 100, height: 100)
                     
                     Text("76°")
                         .font(.system(size: 70, weight: .medium))
                         .foregroundStyle(.white)
                 }
+                .padding(.bottom, 40)
+                
+                HStack(spacing: 20) {
+                    WeatherDayView(dayOfWeek: "Thue",
+                                   imageName: "cloud.sun.fill",
+                                   temperature: 59)
+                    WeatherDayView(dayOfWeek: "Thue",
+                                   imageName: "sun.max.fill",
+                                   temperature: 59)
+                    WeatherDayView(dayOfWeek: "Thue",
+                                   imageName: "cloud.sun.rain.fill",
+                                   temperature: 59)
+                    WeatherDayView(dayOfWeek: "Thue",
+                                   imageName: "wind.snow",
+                                   temperature: 59)
+                    WeatherDayView(dayOfWeek: "Thue",
+                                   imageName: "snowflake",
+                                   temperature: 59)
+                }
+                
+                Spacer()
+                
+                ReusableButton()
+                
                 Spacer()
             }
         }
