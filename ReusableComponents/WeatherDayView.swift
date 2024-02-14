@@ -29,8 +29,9 @@ public struct WeatherDayView: View {
                 .foregroundStyle(.white)
             
             Image(systemName: imageName)
-                .renderingMode(.original)
+                .symbolRenderingMode(.multicolor)
                 .resizable()
+                .foregroundStyle(.red)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: frameSize.width, height: frameSize.height)
                 .padding(1)

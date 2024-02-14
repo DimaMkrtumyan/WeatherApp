@@ -10,18 +10,15 @@ import SwiftUI
 public struct ReusableButton: View {
     @Environment(\.onTapAction) var onTapAction
     private var title: String
-    private var foregroundColor: Color
-    private var backgroundColor: Color
     private var cornerRadius: CGFloat
+    private var isNight: Bool
     
     public init(title: String,
-                foregroundColor: Color,
-                backgroundColor: Color,
-                cornerRadius: CGFloat) {
+                cornerRadius: CGFloat,
+                isNight: Bool) {
         self.title = title
-        self.foregroundColor = foregroundColor
-        self.backgroundColor = backgroundColor
         self.cornerRadius = cornerRadius
+        self.isNight = isNight
     }
     
     public var body: some View {
@@ -32,9 +29,9 @@ public struct ReusableButton: View {
                 .frame(width: 280, height: 50)
                 .background(
                     RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(backgroundColor)
+                        .foregroundStyle(isNight ? Color.mint.gradient : Color.white.gradient)
                 )
-                .foregroundStyle(foregroundColor)
+                .foregroundStyle(isNight ? Color.white : Color.blue)
                 .font(.system(size: 20,
                               weight: .bold,
                               design: .default))

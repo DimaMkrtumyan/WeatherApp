@@ -9,18 +9,16 @@ import SwiftUI
 
 public struct BackgroundView: View {
     
-    private var topColor: Color
-    private var bottomColor: Color
+    public var isNight: Bool
     
-    public init(topColor: Color, bottomColor: Color) {
-        self.topColor = topColor
-        self.bottomColor = bottomColor
+    public init(isNight: Bool) {
+        self.isNight = isNight
     }
-
+    
     public var body: some View {
         LinearGradient(gradient: Gradient(
-            colors: [topColor,
-                     bottomColor]),
+            colors: [isNight ? .black : .blue,
+                     isNight ? .gray : .lightBlue]),
                        startPoint: .topLeading,
                        endPoint: .bottomTrailing)
     }

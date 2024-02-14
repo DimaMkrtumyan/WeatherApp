@@ -16,6 +16,7 @@
 		BA79EEE22B7D0B6C002731CD /* ReusableLocationTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA79EEE12B7D0B6C002731CD /* ReusableLocationTitle.swift */; };
 		BA79EEE42B7D0C93002731CD /* ReusableStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA79EEE32B7D0C93002731CD /* ReusableStatusView.swift */; };
 		BA79EEE82B7D1055002731CD /* OnTapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA79EEE72B7D1055002731CD /* OnTapAction.swift */; };
+		BA79EEEF2B7D2DC3002731CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE61C182B7A8FD7006F37A7 /* Assets.xcassets */; };
 		BAE61C152B7A8FD5006F37A7 /* WeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE61C142B7A8FD5006F37A7 /* WeatherAppApp.swift */; };
 		BAE61C172B7A8FD5006F37A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE61C162B7A8FD5006F37A7 /* ContentView.swift */; };
 		BAE61C192B7A8FD7006F37A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE61C182B7A8FD7006F37A7 /* Assets.xcassets */; };
@@ -281,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA79EEEF2B7D2DC3002731CD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
