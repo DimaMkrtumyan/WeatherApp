@@ -10,8 +10,10 @@ import ReusableComponents
 
 struct ContentView: View {
     
+    // MARK: - Data
     private var location: String = "Cupertino, CA"
     
+    // MARK: - Business logic
     private func setupChangeDayButton() -> some View {
         ReusableButton(title: "Change Day Time",
                        foregroundColor: .blue,
@@ -22,6 +24,7 @@ struct ContentView: View {
         }
     }
     
+    // MARK: - Body
     var body: some View {
         ZStack {
             BackgroundView(topColor: .blue, bottomColor: .lightBlue)

@@ -94,26 +94,67 @@
 			path = ReusableComponents;
 			sourceTree = "<group>";
 		};
-		BA79EEE52B7D0FD7002731CD /* InvironmentKeys */ = {
+		BA79EEE52B7D0FD7002731CD /* CustomInvironmentKeys */ = {
 			isa = PBXGroup;
 			children = (
 				BA79EEE72B7D1055002731CD /* OnTapAction.swift */,
 			);
-			path = InvironmentKeys;
+			path = CustomInvironmentKeys;
 			sourceTree = "<group>";
 		};
 		BA79EEE62B7D0FE7002731CD /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
-				BAE61C162B7A8FD5006F37A7 /* ContentView.swift */,
+				BA79EEE92B7D15C0002731CD /* View */,
+				BA79EEEB2B7D15CB002731CD /* ViewModel */,
+				BA79EEEA2B7D15C6002731CD /* Model */,
 			);
 			path = MainPage;
+			sourceTree = "<group>";
+		};
+		BA79EEE92B7D15C0002731CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BAE61C162B7A8FD5006F37A7 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA79EEEA2B7D15C6002731CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA79EEEB2B7D15CB002731CD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BA79EEEC2B7D15EA002731CD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BAE61C142B7A8FD5006F37A7 /* WeatherAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BA79EEED2B7D1605002731CD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BAE61C182B7A8FD7006F37A7 /* Assets.xcassets */,
+				BAE61C1A2B7A8FD7006F37A7 /* Preview Content */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		BAE61C082B7A8FD5006F37A7 = {
 			isa = PBXGroup;
 			children = (
-				BA79EEE52B7D0FD7002731CD /* InvironmentKeys */,
+				BA79EEE52B7D0FD7002731CD /* CustomInvironmentKeys */,
 				BAE61C132B7A8FD5006F37A7 /* WeatherApp */,
 				BA79EED12B7CF4BD002731CD /* ReusableComponents */,
 				BAE61C122B7A8FD5006F37A7 /* Products */,
@@ -132,10 +173,9 @@
 		BAE61C132B7A8FD5006F37A7 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				BAE61C142B7A8FD5006F37A7 /* WeatherAppApp.swift */,
+				BA79EEEC2B7D15EA002731CD /* App */,
 				BA79EEE62B7D0FE7002731CD /* MainPage */,
-				BAE61C182B7A8FD7006F37A7 /* Assets.xcassets */,
-				BAE61C1A2B7A8FD7006F37A7 /* Preview Content */,
+				BA79EEED2B7D1605002731CD /* Resources */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -482,7 +522,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = L4H488SRYA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -512,7 +552,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = L4H488SRYA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
