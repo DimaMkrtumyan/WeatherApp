@@ -9,8 +9,8 @@ import SwiftUI
 
 public struct BackgroundView: View {
     
-    var topColor: Color
-    var bottomColor: Color
+    private var topColor: Color
+    private var bottomColor: Color
     
     public init(topColor: Color, bottomColor: Color) {
         self.topColor = topColor

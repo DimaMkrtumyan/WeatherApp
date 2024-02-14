@@ -9,10 +9,10 @@ import SwiftUI
 
 public struct WeatherDayView: View {
     
-    var dayOfWeek: String
-    var imageName: String
-    var temperature: Int
-    var frameSize = CGSize(width: 40, height: 40)
+    private var dayOfWeek: String
+    private var imageName: String
+    private var temperature: Int
+    private var frameSize = CGSize(width: 40, height: 40)
     
     public init(dayOfWeek: String,
                 imageName: String,

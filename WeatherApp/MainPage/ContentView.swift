@@ -10,29 +10,27 @@ import ReusableComponents
 
 struct ContentView: View {
     
+    private var location: String = "Cupertino, CA"
+    
+    private func setupChangeDayButton() -> some View {
+        ReusableButton(title: "Change Day Time",
+                       foregroundColor: .blue,
+                       backgroundColor: .white,
+                       cornerRadius: 10)
+        .onTapAction {
+            print("Change Day Time Button Tapped")
+        }
+    }
+    
     var body: some View {
         ZStack {
             BackgroundView(topColor: .blue, bottomColor: .lightBlue)
             .ignoresSafeArea(.all)
             
             VStack {
-                Text("Cupertino, CA")
-                    .font(.system(size: 32, weight: .medium, design: .default))
-                    .foregroundStyle(.white)
-                    .padding()
+                ReusableLocationTitle(location: location)
                 
-                VStack(spacing: 10) {
-                    Image(systemName: "cloud.sun.fill")
-                        .renderingMode(.original)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 100, height: 100)
-                    
-                    Text("76°")
-                        .font(.system(size: 70, weight: .medium))
-                        .foregroundStyle(.white)
-                }
-                .padding(.bottom, 40)
+                ReusableStatusView(imageName: "cloud.sun.fill", temperature: 21)
                 
                 HStack(spacing: 20) {
                     WeatherDayView(dayOfWeek: "Thue",
@@ -53,9 +51,7 @@ struct ContentView: View {
                 }
                 
                 Spacer()
-                
-                ReusableButton()
-                
+                setupChangeDayButton()
                 Spacer()
             }
         }
