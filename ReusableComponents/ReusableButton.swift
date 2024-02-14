@@ -20,7 +20,7 @@ public struct ReusableButton: View {
         self.cornerRadius = cornerRadius
         self.isNight = isNight
     }
-    
+     
     public var body: some View {
         Button {
             onTapAction()
